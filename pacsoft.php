@@ -72,8 +72,8 @@ class Pacsoft {
 	 *
 	 * @param array   $data pacsoft sender data
 	 */
-	public function addSender( array $data ) {
-		$this->senderRegistry[] = new Pacsoft_sender( $data );
+	public function addSender( Pacsoft_sender $sender ) {
+		$this->senderRegistry[] = $sender;
 	}
 
 	/**
@@ -81,8 +81,8 @@ class Pacsoft {
 	 *
 	 * @param array   $data pacsoft sender data
 	 */
-	public function addReciever( array $data ) {
-		$this->recieverRegistry[] = new Pacsoft_reciever( $data );
+	public function addReciever( Pacsoft_reciever $reciever ) {
+		$this->recieverRegistry[] = $reciever;
 	}
 
 	/**
